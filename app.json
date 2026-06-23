@@ -8,6 +8,7 @@
     "userInterfaceStyle": "light",
     "ios": {
       "supportsTablet": true,
+      "appleTeamId": "PDMF5822BX",
       "entitlements": {
         "com.apple.security.application-groups": [
           "group.com.rashidafzaal1718.widgetapp.counter"
@@ -29,7 +30,8 @@
       "favicon": "./assets/favicon.png"
     },
     "plugins": [
-      "./plugins/withAndroidWidget.js"
+      "./plugins/withAndroidWidget.js",
+      "@bacons/apple-targets"
     ]
   }
 }
