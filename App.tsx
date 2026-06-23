@@ -1,12 +1,26 @@
 import { StatusBar } from 'expo-status-bar';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { StyleSheet, Text, View, Pressable } from 'react-native';
+import { readCount, writeCount } from './lib/CounterRepository';
 
 export default function App() {
   const [count, setCount] = useState(0);
 
-  const increment = () => setCount((prev) => prev + 1);
-  const decrement = () => setCount((prev) => prev - 1);
+  useEffect(() => {
+    setCount(readCount());
+  }, []);
+
+  const increment = () => {
+    const next = count + 1;
+    writeCount(next);
+    setCount(next);
+  };
+
+  const decrement = () => {
+    const next = count - 1;
+    writeCount(next);
+    setCount(next);
+  };
 
   return (
     <View style={styles.container}>
