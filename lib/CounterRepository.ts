@@ -1,5 +1,6 @@
 import { Platform } from 'react-native';
 import { File, Paths } from 'expo-file-system';
+import CounterModule from '../modules/counter/src/CounterModule';
 
 const APP_GROUP = 'group.com.rashidafzaal1718.widgetapp.counter';
 
@@ -21,4 +22,5 @@ export function readCount(): number {
 export function writeCount(value: number): void {
   const file = getCountFile();
   file.write(String(value));
+  CounterModule.refreshWidget();
 }
