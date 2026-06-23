@@ -7,7 +7,13 @@
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "entitlements": {
+        "com.apple.security.application-groups": [
+          "group.com.rashidafzaal1718.widgetapp.counter"
+        ]
+      },
+      "bundleIdentifier": "com.rashidafzaal1718.WidgetAppRevision"
     },
     "android": {
       "adaptiveIcon": {
