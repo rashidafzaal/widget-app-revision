@@ -15,10 +15,10 @@ class CounterModule : Module() {
 
     Function("refreshWidget") {
       val manager = AppWidgetManager.getInstance(context)
-      val componentName = ComponentName(context, "com.rashidafzaal1718.WidgetAppRevision.CounterWidget")
+      val componentName = ComponentName(context, "expo.modules.counter.CounterWidget")
       val ids = manager.getAppWidgetIds(componentName)
 
-      val intent = android.content.Intent(context, Class.forName("com.rashidafzaal1718.WidgetAppRevision.CounterWidget"))
+      val intent = android.content.Intent(context, Class.forName("expo.modules.counter.CounterWidget"))
       intent.action = AppWidgetManager.ACTION_APPWIDGET_UPDATE
       intent.putExtra(AppWidgetManager.EXTRA_APPWIDGET_IDS, ids)
       context.sendBroadcast(intent)

@@ -1,4 +1,4 @@
-package com.rashidafzaal1718.WidgetAppRevision
+package expo.modules.counter
 
 import android.appwidget.AppWidgetManager
 import android.appwidget.AppWidgetProvider

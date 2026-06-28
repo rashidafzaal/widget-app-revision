@@ -30,7 +30,6 @@
       "favicon": "./assets/favicon.png"
     },
     "plugins": [
-      "./plugins/withAndroidWidget.js",
       "@bacons/apple-targets"
     ],
     "extra": {
